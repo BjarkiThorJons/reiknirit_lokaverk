@@ -45,7 +45,8 @@ for x in range(len(listi)):
         if listi[x][i] == t:
             xgildid = int(stadalisti[x].split(",")[0])
             if xgildid == i:
-                print("["+listi[x][i]+"] ",end="")
+                #print("["+listi[x][i]+"] ",end="")
+                print("\033[0;31;0m"+listi[x][i]+"\033[0m ", end="")
             else:
                 print(str(listi[x][i]) + " ", end="")
         else:
