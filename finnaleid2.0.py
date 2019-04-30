@@ -31,14 +31,10 @@ summa = 0
 for x in k.values():
     if s == list(x.keys())[0]:
         listinn =x[s]
-        print(listinn)
         listi2 = listinn[0].split(",")
         stadalisti = listinn[1].split(":")
-        print(stadalisti)
         for x in listi2:
             summa+=int(x)
-        print(summa)
-print(listinn)
 for x in range(len(listi)):
     t = listi2[x]
     for i in range(len(listi[x])):
@@ -52,3 +48,8 @@ for x in range(len(listi)):
         else:
             print(str(listi[x][i])+" ",end="")
     print("")
+seinastagidli = int(stadalisti[-1].split(",")[0])
+bil = ""
+for x in range(seinastagidli):
+    bil = bil+"   "
+print(bil+"\033[1;36;0m"+str(summa)+"\033[0m")
